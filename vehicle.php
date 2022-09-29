@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Vehicle</title>
-    </head>
-    <body>
-        
-    </body>
-    <script>
+
         <?php
         class Vehicle{
             //Atributs
@@ -35,6 +27,3 @@
             }
         }
             ?>
-    }
-    </script>
-</html>
