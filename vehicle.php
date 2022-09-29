@@ -29,6 +29,11 @@
                 $this->model = $model;
                 $this->cavalls = $cavalls;
             }
+            //tostring
+            function __toString()
+            {
+                return "Marca: {$this->marca}, Model {$this->model} Preu {$this->preu} cavalls {$this->cavalls} any {$this->any}";
+            }
 
             //getters y setters
             public function getMarca()
