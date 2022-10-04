@@ -56,12 +56,5 @@ class Compte{
     }
 
 }
-// Funcion donde se pone dinero y donde se actualiza el balance
-function posarCalers ($calersFicats){
-    $calers = getDiners();
-    $calers+=$calersFicats;
-    setDiners($calers);
-    return getDiners();
-}
 
 ?>
