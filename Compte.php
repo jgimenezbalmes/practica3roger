@@ -10,11 +10,12 @@ class Compte{
     function __construct1(){
     }
 
-    function __construct2($nom, $cognom, $diners){
+    function __construct($nom, $cognom, $diners){
         $this->nom = $nom;
         $this->cognom = $cognom;
         $this->diners= $diners;
     }
+
 
    //Getters i setters
     public function getNom()
@@ -49,17 +50,23 @@ class Compte{
 
     //Funció on es treuen diners i s'actualitza el balanç
     function treureCalers ($calersTrets){
-        $calers = getDiners();
+        $calers = $this->getDiners();
         $calers-=$calersTrets;
-        setDiners($calers);
-        return getDiners();
+        $this->setDiners($calers);
     }
-    // Funcion donde se pone dinero y donde se actualiza el balance
-        function posarCalers ($calersFicats){
-            $calers = getDiners();
-            $calers+=$calersFicats;
-        }
-}
 
+
+    // Funcion donde se pone dinero y donde se actualiza el balance
+    function posarCalers ($calersFicats){
+            $calers = $this->getDiners();
+            $calers+=$calersFicats;
+            $this->setDiners($calers);
+    }
+}
+    $prova = new Compte("Jordi", "Pujol", 50000);
+    $prova->treureCalers(250);
+    echo "Diners totals després de retirada: " , $prova->getDiners(),"<br>";
+    $prova->posarCalers(1000);
+    echo "Diners totals després d'ingrés: " , $prova->getDiners();
 
 ?>
